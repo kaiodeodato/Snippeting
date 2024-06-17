@@ -14,7 +14,9 @@
   "activationEvents": ["*"],
   "main": "./extension.js",
   "contributes": {
- 
+    "commands": [
+
+    ]
   },
   "configuration": {
     "kaioextension.snippets": {
