@@ -1,22 +1,40 @@
 {
-  "name": "kaioextension",
-  "displayName": "kaioExtension",
+  "name": "snippeting",
+  "displayName": "Snippeting",
+  "publisher": "kaioDeodato",
   "description": "",
-  "version": "0.0.1",
+  "icon": "icon.png",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.90.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["*"],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "kaioextension.helloWorld",
-      "title": "Hello World"
-    }]
+ 
   },
+  "configuration": {
+    "kaioextension.snippets": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "trigger": {
+                    "type": "string",
+                    "description": "Prefixo que dispara o snippet"
+                },
+                "snippet": {
+                    "type": "string",
+                    "description": "Snippet de código associado ao prefixo"
+                }
+            }
+        },
+        "description": "Configuração dos snippets personalizados para a extensão"
+    }
+},
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
