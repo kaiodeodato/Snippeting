@@ -2,53 +2,61 @@
   "name": "snippeting",
   "displayName": "Snippeting",
   "publisher": "kaioDeodato",
-  "description": "",
+  "description": "Snippets pessoais para HTML, React, Tailwind e GitHub Actions.",
   "icon": "icon.png",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.90.0"
   },
   "categories": [
+    "Snippets",
     "Other"
   ],
-  "activationEvents": ["*"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [
-
-    ]
-  },
-  "configuration": {
-    "kaioextension.snippets": {
-        "type": "array",
-        "items": {
+    "commands": [],
+    "configuration": {
+      "title": "Snippeting",
+      "properties": {
+        "kaioextension.snippets": {
+          "type": "array",
+          "items": {
             "type": "object",
             "properties": {
-                "trigger": {
-                    "type": "string",
-                    "description": "Prefixo que dispara o snippet"
-                },
-                "snippet": {
-                    "type": "string",
-                    "description": "Snippet de código associado ao prefixo"
-                }
+              "trigger": {
+                "type": "string",
+                "description": "Prefixo que dispara o snippet"
+              },
+              "snippet": {
+                "type": "string",
+                "description": "Snippet de código associado ao prefixo"
+              }
             }
-        },
-        "description": "Configuração dos snippets personalizados para a extensão"
+          },
+          "default": [],
+          "description": "Configuração dos snippets personalizados para a extensão"
+        }
+      }
     }
-},
+  },
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "package": "npx @vscode/vsce package --no-dependencies",
+    "install-local": "npm run package && code --install-extension ./snippeting-*.vsix --force"
   },
   "devDependencies": {
-    "@types/vscode": "^1.90.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "20.x",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
+    "@types/vscode": "^1.90.0",
     "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
+    "@vscode/test-electron": "^2.4.0",
+    "@vscode/vsce": "^3.9.2",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
   }
 }

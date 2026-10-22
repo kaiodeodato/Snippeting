@@ -6,7 +6,7 @@ let disposableProvider = null;
 
 function activate(context) {
     console.log('Extension activated');
-    vscode.window.showInformationMessage('Kconfig extension activated');
+    vscode.window.showInformationMessage('Snippeting activated');
     registerCompletionProviders(context);
 }
 

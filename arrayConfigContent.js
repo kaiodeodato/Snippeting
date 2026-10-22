@@ -1,11 +1,11 @@
 let arrayConfigContent = [
-    { "snip_basic_html": `<!DOCTYPE html>
+{ "snip_basic_html": `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Document test new</title>
 </head>
 <body>
     
@@ -14,7 +14,7 @@ let arrayConfigContent = [
 </html>` },
 
 
-    { "snip_basic_react_Component": `import React, { useState, useEffect  } from 'react';
+{ "snip_basic_react_Component": `import React, { useState, useEffect  } from 'react';
 
 const Component = () => {
 const [value, setValue] = useState('');
@@ -33,7 +33,7 @@ const [value, setValue] = useState('');
 export default Component;` },
 
 
-    { "snip_basic_navbar_tailwind_html": `<nav class="bg-gray-900">
+{ "snip_basic_navbar_tailwind_html": `<nav class="bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span class="self-center text-2xl font-semibold text-white">Logo</span>
@@ -143,4 +143,4 @@ jobs:
 
 ];
 
-module.exports = arrayConfigContent;
+
