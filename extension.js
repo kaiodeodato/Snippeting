@@ -63,7 +63,7 @@ function disposeCompletionProviders() {
 
 function deactivate() {
     disposeCompletionProviders();
-    console.log('Extension deactivated');
+    console.log('Extension deactivated!');
 }
 
 module.exports = {
@@ -78,3 +78,4 @@ function arraysAreEqual(arr1, arr2) {
     }
     return true;
 }
+
